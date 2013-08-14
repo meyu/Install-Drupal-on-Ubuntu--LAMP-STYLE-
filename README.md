@@ -85,20 +85,20 @@ sudo /etc/init.d/apache2 restart
 ```
 
 ###啟用網站
-於瀏覽器開啟：[http://localhost/<code>tab</code>/](http://localhost/tab/)
+於瀏覽器開啟：[http://localhost/<code>tab</code>/](http://localhost/tab/)  
 繼續提醒：請 <code>tab</code> 自行更名。  
 另，如是以遠端登入網站伺服器者，請將 URL 中的 <code>localhost</code> 更名為該伺服器之 ip 或 URL。   
 選擇偏好的語言：
-
+  
 輸入網站的資料庫名稱、資料庫管理者名稱及密碼：  
 (本文的網站資料庫為 <code>tab</code>、管理者為 <code>root</code>、密碼為 <code>tab.password</code>)
-
+  
 注意，以上為網站的資料庫設定。  
-以下則進行網站後端管理者 (內容管理者，即，管網頁的人) 的設定：
+以下則進行網站後端管理者 (內容管理者，即，管網頁的人) 的設定：  
 (本文將設定的網站管理者為 <code>web.admin</code>、密碼為 <code>web.password</code>、Email為 <code>web＠tab.com</code>)
-
+  
 順手設定一下國家、時區及更新通知。
-
+  
 DONE.
 <br>
 <br>

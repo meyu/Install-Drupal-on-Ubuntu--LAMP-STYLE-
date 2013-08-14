@@ -87,7 +87,7 @@ sudo /etc/init.d/apache2 restart
 ###啟用網站
 於瀏覽器開啟：[http://localhost/<code>tab</code>/](http://localhost/tab/)
 繼續提醒：請 <code>tab</code> 自行更名。  
-另，如是以遠端登入網站伺服器者，請將 URL 中的 <code>localhost</> 更名為該伺服器之 ip 或 URL。   
+另，如是以遠端登入網站伺服器者，請將 URL 中的 <code>localhost</code> 更名為該伺服器之 ip 或 URL。   
 選擇偏好的語言：
 
 輸入網站的資料庫名稱、資料庫管理者名稱及密碼：  

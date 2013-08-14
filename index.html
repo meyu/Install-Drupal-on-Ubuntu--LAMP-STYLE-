@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Install-drupal--lamp-style- : 於 Ubuntu 上安裝 Drupal (LAMP 架構)" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Install-drupal--lamp-style-</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/meyu/Install-Drupal--LAMP-STYLE-">View on GitHub</a>
+
+          <h1 id="project_title">Install-drupal--lamp-style-</h1>
+          <h2 id="project_tagline">於 Ubuntu 上安裝 Drupal (LAMP 架構)</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/meyu/Install-Drupal--LAMP-STYLE-/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/meyu/Install-Drupal--LAMP-STYLE-/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="%E6%89%80%E7%82%BA%E4%BD%95%E4%BE%86" class="anchor" href="#%E6%89%80%E7%82%BA%E4%BD%95%E4%BE%86"><span class="octicon octicon-link"></span></a>所為何來</h1>
+
+<p>以 Drupal 搭配 Ubuntu、Apache、MySQL、PHP 來架設網站 (即 LAMP)。<br>
+本文使用 Ubuntu 的 Drupal-LAMP 套裝指令，能簡單又快速地完成架設；但由於皆為預設值安裝，安全性及效能上較難盡人意，欲架設網站長期經營者，不推薦此方法。</p>
+
+<h1>
+<a name="%E4%BD%BF%E7%94%A8%E7%92%B0%E5%A2%83" class="anchor" href="#%E4%BD%BF%E7%94%A8%E7%92%B0%E5%A2%83"><span class="octicon octicon-link"></span></a>使用環境</h1>
+
+<p>作業系統：Ubuntu 12.04 (Server &amp; Desktop)
+網頁伺服器：Apache 2
+資料庫系統：MySQL 5.5
+指令碼語言：PHP 5
+資料庫管理介面：phpMyAdmin 4
+內容管理系統：Drupal 7.23</p>
+
+<h1>
+<a name="%E5%AE%89%E8%A3%9D%E6%96%B9%E5%BC%8F" class="anchor" href="#%E5%AE%89%E8%A3%9D%E6%96%B9%E5%BC%8F"><span class="octicon octicon-link"></span></a>安裝方式</h1>
+
+<h3>
+<a name="%E9%80%B2%E8%A1%8C-lamp-%E6%9E%B6%E6%A7%8B%E7%9A%84%E5%AE%89%E8%A3%9D%E5%8F%8A%E8%A8%AD%E5%AE%9A" class="anchor" href="#%E9%80%B2%E8%A1%8C-lamp-%E6%9E%B6%E6%A7%8B%E7%9A%84%E5%AE%89%E8%A3%9D%E5%8F%8A%E8%A8%AD%E5%AE%9A"><span class="octicon octicon-link"></span></a>進行 LAMP 架構的安裝及設定</h3>
+
+<p>於終端機中，輸入以下指令來更新 Ubuntu 並安裝 Drupal 所需之伺服器元件：</p>
+
+<div class="highlight"><pre>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade <span class="o">&amp;&amp;</span>
+sudo apt-get install drupal7
+</pre></div>
+
+<p>安裝過程中，請設定 MySQL 的 root (最高權限管理者) 的密碼 (本文使用 <code>root.password</code> 做為密碼)：</p>
+
+<p>設定電子郵件伺服器 (請依實際情況自行設定；本文不進行設定)：</p>
+
+<p>選擇 Yes 以使用 Drupal 的 MySQL 預設套裝設定：</p>
+
+<p>以上作業完成後，請安裝 phpMyAdmin：</p>
+
+<div class="highlight"><pre>sudo apt-get install phpmyadmin
+</pre></div>
+
+<p>設定 phpMyAdmin 的 MySQL 使用權，選擇 Yes 以使用預設值：</p>
+
+<p>選擇 apache2 做為網頁伺服器：</p>
+
+<h3>
+<a name="%E9%80%B2%E8%A1%8C-drupal-%E7%9A%84%E5%AE%89%E8%A3%9D" class="anchor" href="#%E9%80%B2%E8%A1%8C-drupal-%E7%9A%84%E5%AE%89%E8%A3%9D"><span class="octicon octicon-link"></span></a>進行 Drupal 的安裝</h3>
+
+<p>請下載 Drupal，並解壓縮至 /var/www/drupal 資料夾 (本文使用<code>drupal-7.23.tar.gz</code>，請自行更換為所需版本)：</p>
+
+<div class="highlight"><pre>wget http://ftp.drupal.org/files/projects/drupal-7.23.tar.gz <span class="o">&amp;&amp;</span>
+tar zxvf drupal-7.23.tar.gz <span class="o">&amp;&amp;</span> rm drupal-7.23.tar.gz <span class="o">&amp;&amp;</span>
+sudo mv drupal-7.23/ /var/www/tab/
+</pre></div>
+
+<p>另請注意，/var/www/<code>tab</code> 中，<code>tab</code> 即本次要建立之網站代號，亦將成為 URL 路徑，請依喜好自行命名 (請使用不含空格的英文字母命名)。<br>
+接下來，請為這個 <code>tab</code> 網站製作設定檔，並設定網站資料夾的權限：</p>
+
+<div class="highlight"><pre>cp /var/www/tab/sites/default/default.settings.php /var/www/tab/sites/default/settings.php
+mkdir /var/www/tab/sites/default/files
+chmod -R 775 /var/www/tab/
+chmod -R 777 /var/www/tab/sites/default/files/
+chmod 777 /var/www/tab/sites/default/settings.php
+sudo chown -R www-data:www-data /var/www/tab/
+</pre></div>
+
+<p>一樣請注意，所有 /var/www/<code>tab</code> 路徑中的 <code>tab</code>，請自行更名。</p>
+
+<h3>
+<a name="%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99%E6%89%80%E9%9C%80%E4%B9%8B%E8%B3%87%E6%96%99%E5%BA%AB" class="anchor" href="#%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99%E6%89%80%E9%9C%80%E4%B9%8B%E8%B3%87%E6%96%99%E5%BA%AB"><span class="octicon octicon-link"></span></a>建立網站所需之資料庫</h3>
+
+<p>本步驟將於 MySQL 中建立 <code>tab</code> 網站所要依存之資料庫。  </p>
+
+<p>請以 root 身份登入 MySQL，並建立 <code>tab</code> 資料庫予 <code>tab</code> 網站使用：
+(本文之 root 密碼為 <code>root.password</code>)</p>
+
+<div class="highlight"><pre>mysqladmin -u root -p create tab <span class="o">&amp;&amp;</span> 
+mysql -u root -p
+</pre></div>
+
+<p>這裡要提醒的是，資料庫名稱不一定要與網站名一樣 (但建議採用相同名稱，較易於聯想)。 
+指派 root 做為 <code>tab</code> 資料庫的管理者，並設定此資料庫的存取密碼：  </p>
+
+<div class="highlight"><pre><span class="k">GRANT</span> <span class="k">SELECT</span><span class="p">,</span> <span class="k">INSERT</span><span class="p">,</span> <span class="k">UPDATE</span><span class="p">,</span> <span class="k">DELETE</span><span class="p">,</span> <span class="k">CREATE</span><span class="p">,</span> <span class="k">DROP</span><span class="p">,</span> <span class="k">INDEX</span><span class="p">,</span> <span class="k">ALTER</span><span class="p">,</span> <span class="k">CREATE</span> <span class="n">TEMPORARY</span> <span class="kp">TABLES</span><span class="p">,</span> <span class="k">LOCK</span> <span class="kp">TABLES</span> <span class="k">ON</span> <span class="n">tab</span><span class="p">.</span><span class="o">*</span> <span class="k">TO</span> <span class="s1">'root'</span><span class="o">@</span><span class="s1">'localhost'</span> <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="s1">'tab.password'</span><span class="p">;</span>
+</pre></div>
+
+<p>亦可新增其它管理者，做為 <code>tab</code> 資料庫管理者，以區別管理身份及控制權限。本文直接採用 root 做為管理者，以簡化概念。<br>
+再次提醒，LOCK TABLES ON <code>tab</code>.* 中的 <code>tab</code> 為所要指定的網站資料庫，請自行更名。<br>
+另，行末 IDENTIFIED BY '<code>tab.password</code>'; 中的 <code>tab.password</code> 為本文示範用，也請自行替換。<br>
+套用權限設定後，登出 MySQL：</p>
+
+<div class="highlight"><pre><span class="n">FLUSH</span> <span class="n">PRIVILEGES</span><span class="p">;</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="err">\</span><span class="n">q</span>
+</pre></div>
+
+<p>重新啟動 Apache</p>
+
+<div class="highlight"><pre>sudo /etc/init.d/apache2 restart
+</pre></div>
+
+<h3>
+<a name="%E5%95%9F%E7%94%A8%E7%B6%B2%E7%AB%99" class="anchor" href="#%E5%95%9F%E7%94%A8%E7%B6%B2%E7%AB%99"><span class="octicon octicon-link"></span></a>啟用網站</h3>
+
+<p>於瀏覽器開啟：<a href="http://localhost/tab/">http://localhost/<code>tab</code>/</a>
+繼續提醒：請 <code>tab</code> 自行更名。<br>
+另，如是以遠端登入網站伺服器者，請將 URL 中的 <code>localhost&lt;/&gt; 更名為該伺服器之 ip 或 URL。<br>
+選擇偏好的語言：</code></p>
+
+<p>輸入網站的資料庫名稱、資料庫管理者名稱及密碼：<br>
+(本文的網站資料庫為 <code>tab</code>、管理者為 <code>root</code>、密碼為 <code>tab.password</code>)</p>
+
+<p>注意，以上為網站的資料庫設定。<br>
+以下則進行網站後端管理者 (內容管理者，即，管網頁的人) 的設定：
+(本文將設定的網站管理者為 <code>web.admin</code>、密碼為 <code>web.password</code>、Email為 <code>web＠tab.com</code>)</p>
+
+<p>順手設定一下國家、時區及更新通知。</p>
+
+<p>DONE.
+<br><br></p>
+
+<h1>
+<a name="%E8%A3%9C%E5%85%85%E8%AA%AA%E6%98%8E" class="anchor" href="#%E8%A3%9C%E5%85%85%E8%AA%AA%E6%98%8E"><span class="octicon octicon-link"></span></a>補充說明</h1>
+
+<ul>
+<li>網站資料夾位置：/var/www/</li>
+<li>資料庫管理頁面：http://localhost/phpmyadmin/</li>
+<li>插圖後補。</li>
+</ul><h1>
+<a name="%E5%8F%83%E8%80%83%E8%B3%87%E6%BA%90" class="anchor" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%BA%90"><span class="octicon octicon-link"></span></a>參考資源</h1>
+
+<ul>
+<li><a href="https://help.ubuntu.com/community/Drupal">Drupal - Community Ubuntu Documentation</a></li>
+<li><a href="https://drupal.org/project/drupal">Drupal core | drupal.org</a></li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Install-drupal--lamp-style- maintained by <a href="https://github.com/meyu">meyu</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

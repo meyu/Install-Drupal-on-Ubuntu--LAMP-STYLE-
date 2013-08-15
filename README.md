@@ -45,11 +45,11 @@ sudo mv drupal-7.23/ /var/www/tab/
 另請注意，/var/www/<code>tab</code> 中，<code>tab</code> 即本次要建立之網站代號，亦將成為 URL 路徑，請依喜好自行命名 (請使用不含空格的英文字母命名)。  
 接下來，請為這個 <code>tab</code> 網站製作設定檔，並設定網站資料夾的權限：
 ```bash
-cp /var/www/tab/sites/default/default.settings.php /var/www/tab/sites/default/settings.php
-mkdir /var/www/tab/sites/default/files
-chmod -R 775 /var/www/tab/
-chmod -R 777 /var/www/tab/sites/default/files/
-chmod 777 /var/www/tab/sites/default/settings.php
+cp /var/www/tab/sites/default/default.settings.php /var/www/tab/sites/default/settings.php && 
+mkdir /var/www/tab/sites/default/files && 
+chmod -R 775 /var/www/tab/ && 
+chmod -R 777 /var/www/tab/sites/default/files/ && 
+chmod 777 /var/www/tab/sites/default/settings.php && 
 sudo chown -R www-data:www-data /var/www/tab/
 ```
 一樣請注意，所有 /var/www/<code>tab</code> 路徑中的 <code>tab</code>，請自行更名。

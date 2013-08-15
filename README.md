@@ -17,8 +17,8 @@
 ###進行 LAMP 架構的安裝及設定
 於終端機中，輸入以下指令來更新 Ubuntu 並安裝 Drupal 所需之伺服器元件：
 ```bash
-sudo apt-get update && sudo apt-get upgrade &&
-sudo apt-get install drupal7
+sudo aptitude update && sudo aptitude upgrade &&
+sudo aptitude install drupal7
 ```
 安裝過程中，請設定 MySQL 的 root (最高權限管理者) 的密碼 (本文使用 <code>root.password</code> 做為密碼)：
   
@@ -28,7 +28,7 @@ sudo apt-get install drupal7
   
 以上作業完成後，請安裝 phpMyAdmin：
 ```bash
-sudo apt-get install phpmyadmin
+sudo aptitude install phpmyadmin
 ```
 設定 phpMyAdmin 的 MySQL 使用權，選擇 Yes 以使用預設值：
   

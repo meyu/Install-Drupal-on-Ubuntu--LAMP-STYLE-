@@ -141,11 +141,11 @@ DONE.
 =
 * **本文網站設定資訊**
   * 本機資料夾：<code>/var/www/tab/</code>
-  * 本機網址：http://localhost/tab/
+  * 本機網址：[http://localhost/tab/](http://localhost/tab/)
   * 管理者：<code>web.admin</code>
   * 密碼：<code>web.password</code>
-* **本文資料庫設定
-  * 管理頁面入口：http://localhost/phpmyadmin/**
+* **本文資料庫設定**
+  * 管理頁面入口：[http://localhost/phpmyadmin/](http://localhost/phpmyadmin/)
   * 資料庫系統管理者 <code>root</code>，密碼 <code>root.password</code>
   * Drupal資料管理者 <code>root</code>，密碼 <code>drupal.password</code>
   * phpMyAdmin管理者 <code>root</code>，密碼 <code>phpmyadmin.password</code>

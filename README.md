@@ -21,41 +21,41 @@ sudo aptitude update && sudo aptitude upgrade &&
 sudo aptitude install drupal7
 ```
 安裝過程中，請設定 MySQL 的 root (最高權限管理者) 的密碼：  
-(本文使用 <code>root.password</code> 做為 root 的密碼)
+(本文使用 <code>root.password</code> 做為 root 的密碼)  
 ![Set Password for MySQL root](https://lh5.googleusercontent.com/-C7DmC1wJ5RY/Ugxmh7Rh29I/AAAAAAAAf48/Q6kToP6w0YQ/w850-h567-no/01+Set+Password+for+MySQL+root.jpg)
 
 設定電子郵件伺服器：  
-(請依需求自行設定，本文選擇不設定)
+(請依需求自行設定，本文選擇不設定)  
 ![Choose No Configuration for Mail Service](https://lh3.googleusercontent.com/-Q_BFwKU3lHc/Ugxmhx_Do5I/AAAAAAAAf44/vzDUo7Y1jDU/w819-h546-no/02+Choose+No+configuration+for+Mail+Service.jpg)
 
-選擇 Yes 以使用 Drupal 的 MySQL 預設套裝設定：
+選擇 Yes 以使用 Drupal 的 MySQL 預設套裝設定：  
 ![Configure Database for Drupal](https://lh6.googleusercontent.com/-MbHCb1rNbRM/Ugxmhz4uzhI/AAAAAAAAf40/VBRDsFlGdwM/w787-h546-no/03+Configure+Database+for+Drupal.jpg)  
 
-選擇 MySQL 做為資料庫系統：
+選擇 MySQL 做為資料庫系統：  
 ![Choose MySQL Database System](https://lh3.googleusercontent.com/-1dlx88_ephk/Ugxmi90VasI/AAAAAAAAf5Q/f0w5NA5IIOY/w819-h546-no/04+Choose+MySQL+Database+Type.jpg)
 
-輸入 MySQL 的 root 密碼，以提供設定的權限：(本文範例 <code>root.password</code> )
+輸入 MySQL 的 root 密碼，以提供設定的權限：(本文範例 <code>root.password</code>)  
 ![Use root Password to Setup Drupal](https://lh3.googleusercontent.com/-FQKXdFSrGmg/Ugxmi7ZFS0I/AAAAAAAAf5U/WAA6m_39lc4/w819-h546-no/05+Use+root+Password+to+Setup+Drupal.jpg)
 
-設定 Drupal 存取 MySQL 的密碼：
-(本文使用 <code>drupal.password</code> 做為 drupal 的存取密碼)
+設定 Drupal 存取 MySQL 的密碼：  
+(本文使用 <code>drupal.password</code> 做為 drupal 的存取密碼)  
 ![Set Password for Drupal](https://lh4.googleusercontent.com/-ZfyIxA_N4L4/Ugxmi6_WgDI/AAAAAAAAf5M/WbLdqYgfbnk/w819-h546-no/06+Set+Password+for+Drupal.jpg)
 
 以上作業完成後，請安裝 phpMyAdmin：
 ```bash
 sudo aptitude install phpmyadmin
 ```
-選擇 Yes 以預設值安裝：
+選擇 Yes 以預設值安裝：  
 ![Configure Database for phpMyAdmin](https://lh6.googleusercontent.com/-fgSb2S3M1yk/Ugxmjh8xWlI/AAAAAAAAf50/8PrmzAR2ufI/w819-h546-no/07+Configure+Database+for+phpMyAdmin.jpg)  
 
-輸入 MySQL 的 root 密碼，以提供設定的權限：(本文範例 <code>root.password</code> )
+輸入 MySQL 的 root 密碼，以提供設定的權限：(本文範例 <code>root.password</code>)  
 ![Use root Password to Setup phpMyAdmin](https://lh3.googleusercontent.com/-9dJk5jNetSI/UgxmkL2odsI/AAAAAAAAf5w/SpWE7to7aqc/w819-h546-no/08+Use+root+Password+to+Setup+phpMyAdmin.jpg)
 
-設定 phpMyAdmin 存取 MySQL 的密碼：
-(本文使用 <code>phpmyadmin.password</code>)
+設定 phpMyAdmin 存取 MySQL 的密碼：  
+(本文使用 <code>phpmyadmin.password</code>)  
 ![Set Password for phpMyAdmin](https://lh6.googleusercontent.com/-po92ErgW2Y4/UgxmkJQ7QkI/AAAAAAAAf5s/NipA4TLvmgA/w819-h546-no/09+Set+Password+for+phpMyAdmin.jpg)
 
-選擇 apache2 做為網頁伺服器：
+選擇 apache2 做為網頁伺服器：  
 ![Choose Apache](https://lh5.googleusercontent.com/-ZVDE-nWWWog/Ugxmklcc32I/AAAAAAAAf54/9VaDdNfxkXk/w819-h546-no/10+Choose+Apache.jpg)
 
 放置 phpMyAdmin 的頁面路徑，並移除不必要檔案：
@@ -115,23 +115,23 @@ sudo /etc/init.d/apache2 restart
 
 ###啟用網站
 於瀏覽器開啟：[http://localhost/<code>tab</code>/](http://localhost/tab/)  
-(以遠端登入網站伺服器者，請將 URL 中的 <code>localhost</code> 更名為該伺服器之 IP 或 Domain。)
+(以遠端登入網站伺服器者，請將 URL 中的 <code>localhost</code> 更名為該伺服器之 IP 或 Domain)  
 ![Choose Profile](https://lh5.googleusercontent.com/-DT3tbGbLDC4/UgxmlX95lqI/AAAAAAAAf6Q/TY7d7fgOW6g/w918-h487-no/11+Choose+Profile.jpg)
    
-選擇偏好的語言：
+選擇偏好的語言：  
 ![Choose Language](https://lh3.googleusercontent.com/-i2cdLfsEUZo/UgxmlXgbJoI/AAAAAAAAf6M/FAj_hY9iiFg/w918-h487-no/12+Choose+Language.jpg)
 
 請輸入這個網站的資料庫名稱、資料庫管理者名稱及密碼，以連接資料庫：  
-(本文的網站資料庫為 <code>tab</code>、管理者為 <code>root</code>、密碼為 <code>tab.password</code>)
+(本文的網站資料庫為 <code>tab</code>、管理者為 <code>root</code>、密碼為 <code>tab.password</code>)  
 ![Set Connection to Web Database](https://lh3.googleusercontent.com/-F0LiFPF5ywQ/UgxmlYigh7I/AAAAAAAAf6I/YPtFA6W2kEw/w887-h546-no/13+Set+Connection+to+Web+Database.jpg)
   
-設定網站管理者帳密 (並非資料庫管理者)：
-(本文設定網站管理者帳號為 <code>web.admin</code>、密碼為 <code>web.password</code>、Email為 <code>web＠tab.com</code>)
+設定網站管理者帳密 (並非資料庫管理者)：  
+(本文設定網站管理者帳號為 <code>web.admin</code>、密碼為 <code>web.password</code>、Email為 <code>web＠tab.com</code>)  
 ![Set Site Information](https://lh5.googleusercontent.com/-Vqx6SqQVh6M/UgxmmU24B9I/AAAAAAAAf6s/qphUHeHY92A/w384-h546-no/14+Set+Site+Information.jpg)
-也請順手設定一下國家、時區及更新通知。  
-完成無誤時：
+也請順手設定一下國家、時區及更新通知。    
+完成無誤時：  
 ![Finished Info](https://lh5.googleusercontent.com/-mwg5ytSXjRc/UgxmmfnSCGI/AAAAAAAAf6k/z4B-SRMDg_Y/w918-h479-no/15+Finished+Info.jpg)
-新網站，什麼都沒有，請開工吧～
+新網站，什麼都沒有，請開工吧～  
 ![Browse the Site](https://lh3.googleusercontent.com/-mpjYLzMoj3s/UgxmmU0G29I/AAAAAAAAf6g/YlvjqSHa4a4/w816-h546-no/16+Browse+the+Site.jpg)
 DONE.
 <br>

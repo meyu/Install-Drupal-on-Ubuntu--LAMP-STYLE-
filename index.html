@@ -59,11 +59,9 @@
 sudo aptitude install drupal7
 </pre></div>
 
-<p>安裝過程中，請設定 MySQL 的 root (最高權限管理者) 的密碼：<br>
-(本文使用 <code>root.password</code> 做為 root 的密碼)<br><img src="https://lh5.googleusercontent.com/-C7DmC1wJ5RY/Ugxmh7Rh29I/AAAAAAAAf48/Q6kToP6w0YQ/w850-h567-no/01+Set+Password+for+MySQL+root.jpg" alt="Set Password for MySQL root"></p>
+<p>安裝過程中，請設定 MySQL 的 root (最高權限管理者) 的密碼：(本文使用 <code>root.password</code>)：<br><img src="https://lh5.googleusercontent.com/-C7DmC1wJ5RY/Ugxmh7Rh29I/AAAAAAAAf48/Q6kToP6w0YQ/w850-h567-no/01+Set+Password+for+MySQL+root.jpg" alt="Set Password for MySQL root"></p>
 
-<p>設定電子郵件伺服器：<br>
-(請依需求自行設定，本文選擇不設定)<br><img src="https://lh3.googleusercontent.com/-Q_BFwKU3lHc/Ugxmhx_Do5I/AAAAAAAAf44/vzDUo7Y1jDU/w819-h546-no/02+Choose+No+configuration+for+Mail+Service.jpg" alt="Choose No Configuration for Mail Service"></p>
+<p>設定電子郵件伺服器：(請依需求自行設定，本文選擇不設定)<br><img src="https://lh3.googleusercontent.com/-Q_BFwKU3lHc/Ugxmhx_Do5I/AAAAAAAAf44/vzDUo7Y1jDU/w819-h546-no/02+Choose+No+configuration+for+Mail+Service.jpg" alt="Choose No Configuration for Mail Service"></p>
 
 <p>選擇 Yes 以使用 Drupal 的 MySQL 預設套裝設定：<br><img src="https://lh6.googleusercontent.com/-MbHCb1rNbRM/Ugxmhz4uzhI/AAAAAAAAf40/VBRDsFlGdwM/w787-h546-no/03+Configure+Database+for+Drupal.jpg" alt="Configure Database for Drupal"></p>
 
@@ -71,20 +69,21 @@ sudo aptitude install drupal7
 
 <p>輸入 MySQL 的 root 密碼，以提供設定的權限：(本文範例 <code>root.password</code>)<br><img src="https://lh3.googleusercontent.com/-FQKXdFSrGmg/Ugxmi7ZFS0I/AAAAAAAAf5U/WAA6m_39lc4/w819-h546-no/05+Use+root+Password+to+Setup+Drupal.jpg" alt="Use root Password to Setup Drupal"></p>
 
-<p>設定 Drupal 存取 MySQL 的密碼：<br>
-(本文使用 <code>drupal.password</code> 做為 drupal 的存取密碼)<br><img src="https://lh4.googleusercontent.com/-ZfyIxA_N4L4/Ugxmi6_WgDI/AAAAAAAAf5M/WbLdqYgfbnk/w819-h546-no/06+Set+Password+for+Drupal.jpg" alt="Set Password for Drupal"></p>
+<p>設定 Drupal 存取 MySQL 的密碼：(本文使用 <code>drupal.password</code> 做為 drupal 的存取密碼)<br><img src="https://lh4.googleusercontent.com/-ZfyIxA_N4L4/Ugxmi6_WgDI/AAAAAAAAf5M/WbLdqYgfbnk/w819-h546-no/06+Set+Password+for+Drupal.jpg" alt="Set Password for Drupal"></p>
 
-<p>以上作業完成後，請安裝 phpMyAdmin：</p>
+<h3>
+<a name="%E5%AE%89%E8%A3%9D-phpmyadmin" class="anchor" href="#%E5%AE%89%E8%A3%9D-phpmyadmin"><span class="octicon octicon-link"></span></a>安裝 phpMyAdmin</h3>
+
+<p>輸入：</p>
 
 <div class="highlight"><pre>sudo aptitude install phpmyadmin
 </pre></div>
 
 <p>選擇 Yes 以預設值安裝：<br><img src="https://lh6.googleusercontent.com/-fgSb2S3M1yk/Ugxmjh8xWlI/AAAAAAAAf50/8PrmzAR2ufI/w819-h546-no/07+Configure+Database+for+phpMyAdmin.jpg" alt="Configure Database for phpMyAdmin"></p>
 
-<p>輸入 MySQL 的 root 密碼，以提供設定的權限：(本文範例 <code>root.password</code>)<br><img src="https://lh3.googleusercontent.com/-9dJk5jNetSI/UgxmkL2odsI/AAAAAAAAf5w/SpWE7to7aqc/w819-h546-no/08+Use+root+Password+to+Setup+phpMyAdmin.jpg" alt="Use root Password to Setup phpMyAdmin"></p>
+<p>輸入 MySQL 的 root 密碼，以提供設定的權限：<br><img src="https://lh3.googleusercontent.com/-9dJk5jNetSI/UgxmkL2odsI/AAAAAAAAf5w/SpWE7to7aqc/w819-h546-no/08+Use+root+Password+to+Setup+phpMyAdmin.jpg" alt="Use root Password to Setup phpMyAdmin"></p>
 
-<p>設定 phpMyAdmin 存取 MySQL 的密碼：<br>
-(本文使用 <code>phpmyadmin.password</code>)<br><img src="https://lh6.googleusercontent.com/-po92ErgW2Y4/UgxmkJQ7QkI/AAAAAAAAf5s/NipA4TLvmgA/w819-h546-no/09+Set+Password+for+phpMyAdmin.jpg" alt="Set Password for phpMyAdmin"></p>
+<p>設定 phpMyAdmin 存取 MySQL 的密碼：(本文使用 <code>phpmyadmin.password</code>)<br><img src="https://lh6.googleusercontent.com/-po92ErgW2Y4/UgxmkJQ7QkI/AAAAAAAAf5s/NipA4TLvmgA/w819-h546-no/09+Set+Password+for+phpMyAdmin.jpg" alt="Set Password for phpMyAdmin"></p>
 
 <p>選擇 apache2 做為網頁伺服器：<br><img src="https://lh5.googleusercontent.com/-ZVDE-nWWWog/Ugxmklcc32I/AAAAAAAAf54/9VaDdNfxkXk/w819-h546-no/10+Choose+Apache.jpg" alt="Choose Apache"></p>
 
@@ -99,7 +98,7 @@ sudo rm index.html <span class="o">&amp;&amp;</span>
 <a name="%E9%80%B2%E8%A1%8C-drupal-%E7%9A%84%E5%AE%89%E8%A3%9D" class="anchor" href="#%E9%80%B2%E8%A1%8C-drupal-%E7%9A%84%E5%AE%89%E8%A3%9D"><span class="octicon octicon-link"></span></a>進行 Drupal 的安裝</h3>
 
 <p>請下載 Drupal，並解壓縮至 /var/www/drupal 資料夾：<br>
-(本文使用 <code>drupal-7.23.tar.gz</code>，請自行更換為所需版本)</p>
+(本文以 Drupal 7.23 版做示範，版本有異時，請自行更改指令)  </p>
 
 <div class="highlight"><pre>wget http://ftp.drupal.org/files/projects/drupal-7.23.tar.gz <span class="o">&amp;&amp;</span>
 tar zxvf drupal-7.23.tar.gz <span class="o">&amp;&amp;</span> rm drupal-7.23.tar.gz <span class="o">&amp;&amp;</span>
@@ -121,15 +120,14 @@ sudo chown -R www-data:www-data /var/www/tab/
 <h3>
 <a name="%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99%E6%89%80%E9%9C%80%E4%B9%8B%E8%B3%87%E6%96%99%E5%BA%AB" class="anchor" href="#%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99%E6%89%80%E9%9C%80%E4%B9%8B%E8%B3%87%E6%96%99%E5%BA%AB"><span class="octicon octicon-link"></span></a>建立網站所需之資料庫</h3>
 
-<p>本步驟將於 MySQL 中建立 <code>tab</code> 網站所要依存之資料庫。  </p>
-
-<p>請以 root 身份登入 MySQL，並建立 <code>tab</code> 資料庫予 <code>tab</code> 網站使用：</p>
+<p>本步驟將於 MySQL 中建立 <code>tab</code> 網站所要依存之資料庫。<br>
+請以 root 身份登入 MySQL，並建立 <code>tab</code> 資料庫予 <code>tab</code> 網站使用：</p>
 
 <div class="highlight"><pre>mysqladmin -u root -p create tab <span class="o">&amp;&amp;</span> 
 mysql -u root -p
 </pre></div>
 
-<p>過程中，會詢問 root 的密碼以取得操作權限。(本文之 root 密碼為 <code>root.password</code>)<br>
+<p>過程中，會詢問 root 的密碼以取得操作權限。<br>
 這裡要提醒的是，資料庫名稱不一定要與網站名一樣，但建議採用相同名稱，較易於聯想。  </p>
 
 <p>接著，指派 <code>tab</code> 資料庫的管理者，並設定此資料庫的存取密碼：<br>
@@ -154,7 +152,8 @@ mysql -u root -p
 <a name="%E5%95%9F%E7%94%A8%E7%B6%B2%E7%AB%99" class="anchor" href="#%E5%95%9F%E7%94%A8%E7%B6%B2%E7%AB%99"><span class="octicon octicon-link"></span></a>啟用網站</h3>
 
 <p>於瀏覽器開啟：<a href="http://localhost/tab/">http://localhost/<code>tab</code>/</a><br>
-(以遠端登入網站伺服器者，請將 URL 中的 <code>localhost</code> 更名為該伺服器之 IP 或 Domain)<br><img src="https://lh5.googleusercontent.com/-DT3tbGbLDC4/UgxmlX95lqI/AAAAAAAAf6Q/TY7d7fgOW6g/w918-h487-no/11+Choose+Profile.jpg" alt="Choose Profile"></p>
+非本機操作者，請將 URL 中的 <code>localhost</code> 更名為該伺服器之域名或 IP：：
+(看起來會類似 <a href="http://10.10.10.10/">http://10.10.10.10/</a><code>tab</code> 或 <a href="http://example.com/">http://example.com/</a><code>tab</code>)<br><img src="https://lh5.googleusercontent.com/-DT3tbGbLDC4/UgxmlX95lqI/AAAAAAAAf6Q/TY7d7fgOW6g/w918-h487-no/11+Choose+Profile.jpg" alt="Choose Profile"></p>
 
 <p>選擇偏好的語言：<br><img src="https://lh3.googleusercontent.com/-i2cdLfsEUZo/UgxmlXgbJoI/AAAAAAAAf6M/FAj_hY9iiFg/w918-h487-no/12+Choose+Language.jpg" alt="Choose Language"></p>
 
@@ -162,33 +161,31 @@ mysql -u root -p
 (本文的網站資料庫為 <code>tab</code>、管理者為 <code>root</code>、密碼為 <code>tab.password</code>)<br><img src="https://lh3.googleusercontent.com/-F0LiFPF5ywQ/UgxmlYigh7I/AAAAAAAAf6I/YPtFA6W2kEw/w887-h546-no/13+Set+Connection+to+Web+Database.jpg" alt="Set Connection to Web Database"></p>
 
 <p>設定網站管理者帳密 (並非資料庫管理者)：<br>
-(本文設定網站管理者帳號為 <code>web.admin</code>、密碼為 <code>web.password</code>、Email為 <code>web＠tab.com</code>)<br><img src="https://lh5.googleusercontent.com/-Vqx6SqQVh6M/UgxmmU24B9I/AAAAAAAAf6s/qphUHeHY92A/w384-h546-no/14+Set+Site+Information.jpg" alt="Set Site Information">
+(本文設定網站管理者帳號為 <code>web.admin</code>、密碼為 <code>web.password</code>、Email為 <code>tab＠example.com</code>)<br><img src="https://lh5.googleusercontent.com/-Vqx6SqQVh6M/UgxmmU24B9I/AAAAAAAAf6s/qphUHeHY92A/w384-h546-no/14+Set+Site+Information.jpg" alt="Set Site Information"><br>
 也請順手設定一下國家、時區及更新通知。<br>
-完成無誤時：<br><img src="https://lh5.googleusercontent.com/-mwg5ytSXjRc/UgxmmfnSCGI/AAAAAAAAf6k/z4B-SRMDg_Y/w918-h479-no/15+Finished+Info.jpg" alt="Finished Info">
-新網站，什麼都沒有，請開工吧～<br><img src="https://lh3.googleusercontent.com/-mpjYLzMoj3s/UgxmmU0G29I/AAAAAAAAf6g/YlvjqSHa4a4/w816-h546-no/16+Browse+the+Site.jpg" alt="Browse the Site">
-DONE.
+完成無誤時：<br><img src="https://lh5.googleusercontent.com/-mwg5ytSXjRc/UgxmmfnSCGI/AAAAAAAAf6k/z4B-SRMDg_Y/w918-h479-no/15+Finished+Info.jpg" alt="Finished Info"><br>
+新網站，什麼都沒有，請開工吧～<br><img src="https://lh3.googleusercontent.com/-mpjYLzMoj3s/UgxmmU0G29I/AAAAAAAAf6g/YlvjqSHa4a4/w816-h546-no/16+Browse+the+Site.jpg" alt="Browse the Site"></p>
+
+<p>DONE.
 <br><br></p>
 
 <h1>
 <a name="%E8%A3%9C%E5%85%85%E8%AA%AA%E6%98%8E" class="anchor" href="#%E8%A3%9C%E5%85%85%E8%AA%AA%E6%98%8E"><span class="octicon octicon-link"></span></a>補充說明</h1>
 
-<ul>
-<li>
-<strong>本文網站設定資訊</strong>
+<h3>
+<a name="%E6%9C%AC%E6%96%87%E7%B6%B2%E7%AB%99%E8%A8%AD%E5%AE%9A%E8%B3%87%E8%A8%8A" class="anchor" href="#%E6%9C%AC%E6%96%87%E7%B6%B2%E7%AB%99%E8%A8%AD%E5%AE%9A%E8%B3%87%E8%A8%8A"><span class="octicon octicon-link"></span></a>本文網站設定資訊</h3>
 
 <ul>
-<li>本機資料夾：<code>/var/www/tab/</code>
-</li>
 <li>本機網址：<a href="http://localhost/tab/">http://localhost/tab/</a>
+</li>
+<li>本機資料夾：<code>/var/www/tab/</code>
 </li>
 <li>管理者：<code>web.admin</code>
 </li>
 <li>密碼：<code>web.password</code>
 </li>
-</ul>
-</li>
-<li>
-<strong>本文資料庫設定</strong>
+</ul><h3>
+<a name="%E6%9C%AC%E6%96%87%E8%B3%87%E6%96%99%E5%BA%AB%E8%A8%AD%E5%AE%9A" class="anchor" href="#%E6%9C%AC%E6%96%87%E8%B3%87%E6%96%99%E5%BA%AB%E8%A8%AD%E5%AE%9A"><span class="octicon octicon-link"></span></a>本文資料庫設定</h3>
 
 <ul>
 <li>管理頁面入口：<a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a>
@@ -202,15 +199,11 @@ DONE.
 <li>
 <code>tab</code>網站資料庫管理者 <code>root</code>，密碼 <code>tab.password</code>
 </li>
-</ul>
-</li>
-<li>
-<strong>基本資安補強</strong>
+</ul><h3>
+<a name="%E5%9F%BA%E6%9C%AC%E8%B3%87%E5%AE%89%E8%A3%9C%E5%BC%B7" class="anchor" href="#%E5%9F%BA%E6%9C%AC%E8%B3%87%E5%AE%89%E8%A3%9C%E5%BC%B7"><span class="octicon octicon-link"></span></a>基本資安補強</h3>
 
 <ul>
 <li>不需遠端登入資料庫時，請：<code>sudo rm /var/www/phpmyadmin</code>，反之，可：<code>cd /var/www/ &amp;&amp; sudo ln -s /usr/share/phpmyadmin</code>
-</li>
-</ul>
 </li>
 </ul><h1>
 <a name="%E5%8F%83%E8%80%83%E8%B3%87%E6%BA%90" class="anchor" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%BA%90"><span class="octicon octicon-link"></span></a>參考資源</h1>
